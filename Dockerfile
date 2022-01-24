@@ -17,7 +17,7 @@ ADD run.sh ./run.sh
 RUN ./autogen.sh && \
 export LIBCURL_CFLAGS='-I/usr/include/curl' && \
 export LIBCURL_LIBS='-L/usr/lib -lcurl' && \
-CFLAGS="-O2 -Wall -march=native" ./configure --enable-gekko && \
+CFLAGS="-O2 -Wall -march=native" ./configure --enable-gekko --without-curses && \
 make
 
 RUN chmod +x ./run.sh
