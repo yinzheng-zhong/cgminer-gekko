@@ -8,7 +8,7 @@ rm -rf /var/lib/apt/lists/*
 
 WORKDIR /
 RUN wget https://github.com/yinzheng-zhong/cgminer/archive/refs/heads/master.zip -O cgminer.zip && \
-unzip cgminer.zip && rm cgminer.zip
+unzip cgminer.zip && mv cgminer-master cgminer && rm cgminer.zip
 
 WORKDIR /cgminer
 
