@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 RUN apt-get -qy update && \
 apt-get -y install build-essential autoconf libtool libncurses-dev yasm curl libcurl4-openssl-dev \
-libudev-dev libusb-1.0-0-dev pkg-config wget unzip && \
+libudev-dev libusb-1.0-0-dev pkg-config zlib1g-dev wget unzip && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists/*
 
